@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.errorpage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000000;
+    position: absolute;
+}
+
+.centercontainer{
+    display: flex;
+    position: absolute;
+    gap: 15px;
+}
+
+.error404{
+    color: #000000;
+    font-size: 200px;
+    font-family: sans-serif;
+    font-weight: 900;
+    text-shadow: 0px 0px 50px rgb(255, 255, 255);
+    position: relative;
+    z-index: 10;
+    mix-blend-mode: difference;
+    
+}
+
+.center
+{
+    position: relative;
+    animation: topDown 5s ease-in-out infinite;
+}
+
+@keyframes topDown {
+    0% {
+      top: -60px;
+    }50%{
+        top: 20px;
+    }
+    100% {
+      top: -60px;
+    }
+  }
+
+.bottom{
+    transform: rotate(-15deg);
+    position: relative;
+    animation: rotateleft 5s ease-in-out infinite;
+}
+
+@keyframes rotateleft {
+    0%{
+        transform: rotate(15deg);
+    }50%{
+        transform: rotate(-15deg);
+    }100%{
+        transform: rotate(15deg);
+    }
+}
+
+.bottom:nth-child(3){
+    transform: rotate(15deg);
+    position: relative;
+    animation: rotateright 5s ease-in-out infinite;
+}
+
+@keyframes rotateright {
+    0%{
+        transform: rotate(-15deg);
+    }50%{
+        transform: rotate(15deg);
+    }100%{
+        transform: rotate(-15deg);
+    }
+}
+
+
+.moon{
+    position: absolute;
+    left:0;
+    top: 0;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 50px #fff;
+    animation: belltype 5s linear infinite;
+    transform: rotate(-15deg);
+}
+
+@keyframes belltype {
+    0%{
+        transform: rotate(-15deg);
+    }50%{
+        transform: rotate(15deg);
+    }100%{
+        transform: rotate(-15deg);
+    }
+}
+
+.moon-img{
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.star-img {
+    width: 100%;
+    height: 100%;
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(241, 255, 47));
+    -moz-filter: drop-shadow(0px 0px 10px rgb(241, 255, 47));
+    -ms-filter: drop-shadow(0px 0px 10px rgb(241, 255, 47)); 
+    -o-filter: drop-shadow(0px 0px 10px rgb(241, 255, 47));
+    filter: drop-shadow(0px 0px 10px rgb(241, 255, 47));
+    animation: bigsmall 3s linear infinite;
+}
+
+@keyframes bigsmall {
+    0%{
+        scale: 0.5;
+    }50%{
+        scale: 1;
+    }100%{
+        scale: 0.5;
+    }
+}
+
+
+.star:nth-child(2){
+    top: 120px;
+    left: 320px;
+}
+
+.star:nth-child(4){
+    left: 520px;
+    top: 520px;
+}
+
+.star:nth-child(3){
+    right: 220px;
+    top: 580px;
+}
+
+.star:nth-child(3){
+    right: 220px;
+    top: 580px;
+}
+
+.star:nth-child(5){
+    right: 280px;
+    top: 280px;
+}
+
+.star:nth-child(5){
+    right: 280px;
+    top: 280px;
+}
+
+.star:nth-child(6){
+    right: 80px;
+    top: 80px;
+}
+
+.star:nth-child(7){
+    left: 80px;
+    top: 620px;
+}
+
+.star:nth-child(8){
+    left: 280px;
+    top: 380px;
+}
+
+.rocketStar{
+    position: absolute;
+    top: 550px;
+    left :20px;
+    width:  95px;
+    height: 95px;
+    border-radius: 20px;
+    animation: rocket 2s linear infinite;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+@keyframes rocket {
+    0% {
+        left: 0;
+        bottom: 0;
+    }
+    100% {
+        left: 100%;
+        top: 0;
+    }
+}
+
+.rocketStar-img{
+    width: 100%;
+    height: 100%;
+    transform: rotate(15deg);
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+    -moz-filter: drop-shadow(0px 0px 10px #fff);
+    -ms-filter: drop-shadow(0px 0px 10px #fff); 
+    -o-filter: drop-shadow(0px 0px 10px #fff);
+    filter: drop-shadow(0px 0px 10px #fff);
+}
+
+.bottomcontainer{
+    position: absolute;
+    bottom: 100px;
+    color: #fff;
+    font-family: cursive;
+    font-size: 20px;
+    z-index: 10;
+}
+
+#follower {
+    position: absolute;
+    width:  70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px #fff;
+    z-index: 1;
+    pointer-events: none;
+}
